@@ -1,8 +1,8 @@
 #Scratch project
 
-**This is bolded**
-*This is italicized*
-~~strikethrough~~
+**This is bolded** <br>
+*This is italicized* <br>
+~~strikethrough~~ <br>
 
 numbered list
 1. item one
