@@ -2,6 +2,7 @@
 
 **This is bolded**
 *This is italicized*
+~~strikethrough~~
 
 numbered list
 1. item one
