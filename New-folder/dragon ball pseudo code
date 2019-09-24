@@ -1,0 +1,468 @@
+**z1 sprite**
+*Define Movements*
+  forever
+    *if key left arrow is pressed
+      *point in direction -90
+      *change scroll x by 5
+      *switch costume to z2
+      *else
+        *point in direction 90
+        *switch costume to z1
+    *if key right arrow is pressed
+      *switch costume to z2
+      *change scroll x by -5
+      *point in direction 10
+    *if key down arrow is pressed
+      *switch costume to sprite jump
+      *change y by -5
+      *point in direction 180
+    *if key up arrow is pressed and y-position is less than 122
+      *change y by 5
+      *switch costume to sprite jump
+    *if touching ik
+      *change x by -.01
+      *change scroll x by 5
+    *if touching obstacle 2
+      *change x by -.01
+      *change scroll x by 5
+  
+  When green flag is clicked
+      *hide
+      *set scroll x to 0
+      *show variable health
+      *set health to 10
+        forever
+          *if health is equal or less than 0
+            *broadcast game over
+          *if touching untitled
+            *change health by -3
+            *wait .25 seconds
+          *if touching obstacle 2, ik, vool, cool, cool2, cool3, cool4, or bad guy
+            *wait .25 seconds
+            *change health by -2
+      
+      
+  When backdrop switches to game
+    go to x: -81, y:-99
+    show
+    switch costume to z1
+    say "Do not touch the ground" for 2.0 seconds
+    forever
+      movements
+      *if y-position is less than -100
+        *stop other scripts in this sprite
+        *broadcast game over
+      *if touching terrain 1, terrain 2, terrain 3, terrain 4, terrain 5, terrain 6, terrain 7, or terrain 8
+        *set velocity to .5
+   When I receive fire
+    forever
+      *if key space is pressed
+        *switch costume to kill man
+   When I receive down bump
+    set velocity to 0
+   When I receive boss
+    switch costume to z1
+    go to x: -134, y: -30
+   When I receive win
+    wait .0003
+    hide
+    stop other scripts in this sprite
+   When I receive game over
+    hide
+    stop other scripts in this sprite
+**Untitled sprite**
+  When green flag is pressed
+    hide
+    forever
+      *if touching z1
+        *wait .005 seconds
+        *hide
+  When backdrop switches to game
+    forever
+      *go to x: 240, y: pick random 165 to -140
+      *hide
+      *create clone of myself
+      *wait 1.5 seconds
+  When I start as clone
+    repeat 100
+      *hide
+      *wait 1.5 seconds
+      *show
+      *glide 2.65 seconds to x: -240, y: pick random 165 to -140
+      *delete this clone
+  When I receive win
+    *wait .0003
+    *hide
+    *stop other scripts in this spriet
+  When I receive game over
+    *stop other scripts in this sprite
+    *hide
+**terrain 1 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 0
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+**terrain 2 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 1
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+**terrain 3 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 2
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite    
+**terrain 4 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 3
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite    
+**terrain 5 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 4
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite  
+**terrain 6 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 5
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+**terrain 7 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 6
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite    
+**terrain 8 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x:0, y:0
+    show
+    forever
+      set x to scroll x + 480 * 7
+  When I receive game over 
+    hide
+  When I receive boss
+    hide
+    stop other scripts in this sprite    
+**obstacle 2 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    show
+    forever
+      set x to scroll x + 480 * 3
+    forever
+      switch costume to obstacle 2
+      wait 2 seconds
+      switch costume to obstacle 3
+      wait 2 second
+      switch costume to obstacle 4
+      wait 2 seconds
+    forever
+      set x to scroll x + 480 * 1
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over 
+    hide 
+    stop other scripts in this sprite
+**ik sprite**
+  When green flag is pressed 
+    hide
+  When I receive start
+    show 
+    forever
+      set x to scroll x + 480 * 2
+    forever
+      repeat 10
+        change x by 10
+        switch costume to ik
+      repeat 10
+        change x by -10
+        switch costume to ik2
+  When I receive boss
+   hide
+   stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite
+**vool sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    show
+    go to x: -73, y: 102
+   forever 
+      set x to scroll x + 480 * 4
+    forever
+      repeat 6
+        change y by 25
+        wait .5 seconds
+        change y by -25
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide
+    stop other scripts in this sprite
+**obstacle 3 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    show
+    forever
+      set x to scroll x + 480 * 5
+    forever
+      switch costume to obstacle 2
+      wait 2 seconds
+      switch costume to obstacle 3
+      wait 2 seconds
+      switch costume to obstacle 4
+      wait 2 seconds
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide
+    stop other scripts in this sprite
+**cool sprite**
+  When green flag is pressed
+    switch costume to cool
+    hide
+  When I receive start
+    show 
+    forever
+      set x to scroll x + 480 * 6.1
+    forever
+      switch costume to cool
+      set y to 125
+      wait .9 seconds
+      repeat 25
+        change y by -5
+      switch costume to cool 2
+      repeat 25
+        change y by -5
+      switch costume to cool 3
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite
+**cool sprite**
+  When green flag is pressed
+    switch costume to cool
+    hide
+  When I receive start
+    show 
+    forever
+      set x to scroll x + 480 * 6.3
+    forever
+      switch costume to cool
+      set y to 125
+      wait .9 seconds
+      repeat 25
+        change y by -5
+      switch costume to cool 2
+      repeat 25
+        change y by -5
+      switch costume to cool 3
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite 
+**cool sprite**
+  When green flag is pressed
+    switch costume to cool
+    hide
+  When I receive start
+    show 
+    forever
+      set x to scroll x + 480 * 6.5
+    forever
+      switch costume to cool
+      set y to 125
+      wait .9 seconds
+      repeat 25
+        change y by -5
+      switch costume to cool 2
+      repeat 25
+        change y by -5
+      switch costume to cool 3
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite 
+**cool sprite**
+  When green flag is pressed
+    switch costume to cool
+    hide
+  When I receive start
+    show 
+    forever
+      set x to scroll x + 480 * 6.7
+    forever
+      switch costume to cool
+      set y to 125
+      wait .9 seconds
+      repeat 25
+        change y by -5
+      switch costume to cool 2
+      repeat 25
+        change y by -5
+      switch costume to cool 3
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite  
+**yes 2 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    show
+    forever
+      set x to scroll x + 480 * 7.5
+    forever
+      if touching z1
+        broadcast boss
+  When I receive boss
+    hide
+    stop other scripts in this sprite
+  When I receive game over
+    hide 
+    stop other scripts in this sprite
+**bad guy sprite**
+  When green flag is pressed
+    hide
+  When I receive boss
+    show
+    go to x:0, y:0
+    say, "you can not beat me" for 2 seconds
+    forever
+      if touching sprite 5
+        wait .01
+        broadcast win
+  When I receive win
+    hide 
+    stop other scripts in this sprite
+  When I receive game over
+    wait .0003
+    hide
+    stop other scripts in this sprite
+**Sprite5 sprite**
+  When green flag is pressed
+    hide
+  When space key pressed
+    broadcast fire
+    create clone of myself
+  When I start as a clone
+    show
+    go to z1
+    point toward mouse pointer
+    forever
+      repeat until touching bad guy or touching edge
+        move 10 steps
+      hide
+  When I receive win
+    wait .0003 seconds 
+    hide
+    stop other scripts in this sprite
+  When I receive game over 
+    hide
+    stop other scripts in this sprite
+**Sprite4 sprite**  
+  When green flag is pressed 
+    hide
+  When I receive start
+    go to x: 276, y: 0
+    show
+    go to front layer
+**Sprite2 sprite**   
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x: -6, y: -9
+    show
+    go to front layer
+**Sprite6 sprite**
+  When green flag is pressed
+    hide
+  When I receive start
+    go to x: -6, y: -9
+    show
+    go to front layer
+**backdrops**
+  When green flag is pressed
+    switch backdrop to backdrop 2
+  When stage clicked
+    broadcast start
+    switch backdrop to game
+  When I receive game over
+    switch backdrop to gg
+  When I receive boss
+    switch backdrop to backdrop
+  When I receive win
+    switch backdrop to win 6
