@@ -1,0 +1,8 @@
+
+
+#include <stdio.h>
+
+int maln(void)
+{
+      printf("hello, world/n");
+}
