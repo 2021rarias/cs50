@@ -1,3 +1,70 @@
+#Collection of notes in the C language
+
+Scratch:          Say(hello, world)
+
+'''C
+printf(hello, world/n");
+'''
+
+All printed words are called strings and strings are enclosed "string" <br>
+n tells computer to start a new line <br>
+The ; is like the period at the end of a sentence. It tells the computer that this is the end of the statement.
+
+Scratch: Set counter to 0
+
+'''C
+int counter = 0;
+'''
+
+In C you must declare the type of variables you are creatig
+
+Scratch: Change counter by 1
+
+'''C
+counter = counter + 1; # add any number to counter;
+counter + = 1 # add any number to counter;
+counter++ # only adds plus 1 counter;
+'''
+
+The = sign is not "equals", it means "assign" or "get".
+
+Once you have created a variable, you do not need to keep telling the computer what type of variable ot will be such as "int".
+
+'''C
+if (x<y) them
+{
+      printf("x is less than y/n);
+}
+'''
+
+Scratch: If x<y then 
+say x is less than y
+else
+say x is not less than y
+
+'''C
+      if (x < y)
+{
+      printf("x is less than y/n);
+}
+else
+{
+      print ("x is not less then y/n);
+}
+'''
+In scratch 1 = sign represents equality
+In C, 2 equal signs shows equality
+
+You need to keyword true to create a forever loop becauseyou need to ask the computer a question that will always be true and the word true by defintion
+
+The % makes a placeholder
+
+A return value is something that the user writes back to the computer
+
+For a loop, you need to know how many times you want to execute the code 
+How many times you want to execute the code
+Then constantly make sure that one does not exceed the other.
+
 
 
 #include <stdio.h>
